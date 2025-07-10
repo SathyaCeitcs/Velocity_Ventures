@@ -1,0 +1,85 @@
+/* General Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section */
+.corporate-hero-section {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.corporate-hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.corporate-hero-text-content {
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.corporate-hero-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.corporate-hero-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #f1f1f1;
+}
+
+.corporate-hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.corporate-hero-button {
+  background-color: #005F7B;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: 5px solid white;
+  border-radius: 9999px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.corporate-hero-button:hover {
+  background-color: #08314A;
+  transform: scale(1.05);
+}
+
+.corporate-hero-button.outline {
+  background: transparent;
+  border: 5px solid #fff;
+  color: #fff;
+}
+
+.corporate-hero-button.outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}

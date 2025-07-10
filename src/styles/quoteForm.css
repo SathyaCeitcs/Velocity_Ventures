@@ -1,0 +1,225 @@
+/* === MODAL OVERLAY === */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(2px);
+  overflow-y: auto;
+}
+
+/* === MODAL CONTAINER === */
+.quote-modal {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 10px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  box-sizing: border-box;
+  max-height: 100vh;
+}
+
+/* === HEADER === */
+.quote-modal h2 {
+  color: #800080;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.quote-modal p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* === FORM === */
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.quote-form label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+.quote-form input,
+.quote-form textarea {
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: none;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.quote-form input:focus,
+.quote-form textarea:focus {
+  border-color: #800080;
+}
+
+.quote-form textarea {
+  min-height: 100px;
+}
+
+/* === ACTION BUTTONS === */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.submit-btn,
+.cancel-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn {
+  background: linear-gradient(to right, #a133ff, #5d00c7);
+  color: #fff;
+  border: none;
+}
+
+.submit-btn:hover {
+  background: #5d00c7;
+}
+
+.cancel-btn {
+  background: #f3f3f3;
+  border: 1px solid #ccc;
+  color: #444;
+}
+
+.cancel-btn:hover {
+  background: #e0e0e0;
+}
+
+/* === CLOSE BUTTON (X) === */
+.close-modal {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  transition: transform 0.2s ease;
+}
+
+.close-modal:hover {
+  transform: scale(1.2);
+}
+
+/* === FADE IN ANIMATION === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* === TABLET RESPONSIVENESS === */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .modal-overlay {
+    align-items: flex-start;
+    padding-top: 20px; 
+  }
+
+  .quote-modal {
+    margin-top: 0;
+  }
+
+  .quote-modal h2 {
+    font-size: 20px;
+  }
+
+  .quote-modal p {
+    font-size: 13px;
+  }
+
+  .submit-btn,
+  .cancel-btn {
+    font-size: 13px;
+    padding: 9px 18px;
+  }
+}
+
+/* === MOBILE RESPONSIVENESS === */
+@media (max-width: 576px) {
+  .quote-modal {
+    padding: 10px 16px;
+    border-radius: 10px;
+    width: 90%;
+  }
+
+  .quote-modal h2 {
+    font-size: 18px;
+  }
+
+  .quote-modal p {
+    font-size: 12px;
+    margin-bottom: 14px;
+  }
+
+  .quote-form label {
+    font-size: 12px;
+  }
+
+  .quote-form input,
+  .quote-form textarea {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .quote-form textarea {
+    min-height: 80px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .submit-btn,
+  .cancel-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .close-modal {
+    font-size: 20px;
+    top: 12px;
+    right: 12px;
+  }
+}
