@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="navbar-inner">
 
           <div className="navbar-left">
-            <div className="logo-text">Velocity Ventures</div>
+            <div className="logo-text">Velocity Ventures </div>
           </div>
 
           <nav className={`navbar-center nav-links ${menuOpen ? "open" : ""}`}>

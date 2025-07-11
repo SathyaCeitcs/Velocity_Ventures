@@ -5,62 +5,48 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
+        {/* Company Info */}
         <div className="footer-left">
-          <h2 className="footer-title">VENTURES VELOCITY</h2>
-          <h3 className="footer-heading">CALL US</h3>
-          <p className="footerp">📞 IN +91 9790835693</p>
-          <p className="footerp">📞 IN +91 9791424421</p>
-          <p className="footerp">📞 AE +971 545313855</p>
-
-          <h3 className="footer-heading">OUR LOCATION</h3>
-          <p className="footerp"><strong>F3 Plot Number 36</strong></p>
-          <p className="footerp">Ranganathan Nagar Second Street,</p>
-          <p className="footerp">Selaiyur, Tambaram, Chennai - 600073</p>
+          <h2 className="footer-title">VELOCITY VENTURES LLC</h2>
+          <h3 className="footer-heading">LOCATION</h3>
+          <p className="footerp">1371 Bobwhite Court</p>
+          <p className="footerp">Greenwood, IN 46143</p>
         </div>
 
+        {/* Quick Links */}
         <div className="footer-middle">
           <h3 className="footer-heading">QUICK LINKS</h3>
           <ul className="footer-list">
-            <li className="footer-item"><a className="footer-link" href="/home">➤ Home</a></li>
-            <li className="footer-item"><a className="footer-link" href="/about">➤ About Us</a></li>
-            <li className="footer-item"><a className="footer-link" href="/tls">➤ Leadership Summit</a></li>
-            <li className="footer-item"><a className="footer-link" href="/features">➤ Features</a></li>
-            <li className="footer-item"><a className="footer-link" href="/services">➤ Services</a></li>
-            <li className="footer-item"><a className="footer-link" href="/projects">➤ Projects</a></li>
-            <li className="footer-item"><a className="footer-link" href="/blog">➤ Blog</a></li>
-            <li className="footer-item"><a className="footer-link" href="/contact">➤ Contact Us</a></li>
-            <li className="footer-item"><a className="footer-link" href="/experts">➤ Experts</a></li>
-            <li className="footer-item"><a className="footer-link" href="/careers">➤ Careers</a></li>
+            <li><a href="/home" className="footer-link">➤ Home</a></li>
+            <li><a href="/about" className="footer-link">➤ About</a></li>
+            <li><a href="/services" className="footer-link">➤ Services</a></li>
+            <li><a href="/contact" className="footer-link">➤ Contact</a></li>
           </ul>
         </div>
 
+        {/* Services */}
         <div className="footer-services">
-          <h3 className="footer-heading">SERVICES</h3>
+          <h3 className="footer-heading">OUR SERVICES</h3>
           <ul className="footer-list">
             <li className="footer-item">➤ Digital Transformation</li>
-            <li className="footer-item">➤ Business Intelligence</li>
-            <li className="footer-item">➤ Analytics and Data Science</li>
-            <li className="footer-item">➤ Cybersecurity</li>
-            <li className="footer-item">➤ AI & Emerging Technology</li>
-            <li className="footer-item">➤ Customer Analytics</li>
-            <li className="footer-item">➤ Data Management & Mining</li>
-            <li className="footer-item">➤ Innovation & Data Architects</li>
-            <li className="footer-item">➤ IT Compliance & Governance</li>
+            <li className="footer-item">➤ Cloud Solutions</li>
+            <li className="footer-item">➤ DevOps</li>
+            <li className="footer-item">➤ Artificial Intelligence</li>
           </ul>
         </div>
 
+        {/* Contact Details */}
         <div className="footer-right">
-          <h3 className="footer-heading">FEATURES</h3>
-          <ul className="footer-list">
-            <li className="footer-item">➤ AI and Cybersecurity</li>
-            <li className="footer-item">➤ AI and Healthcare</li>
-            <li className="footer-item">➤ SAP MM</li>
-          </ul>
+          <h3 className="footer-heading">CONTACT DETAILS</h3>
+          <p className="footerp"><i className="fas fa-envelope"></i> joysantosh@gmail.com</p>
+          <p className="footerp"><i className="fas fa-clock"></i> Mon–Fri: 9 AM – 5 PM</p>
+          <p className="footerp"><i className="fas fa-times-circle"></i> Sat & Sun: Closed</p>
         </div>
       </div>
 
+      {/* Bottom Strip */}
       <div className="footer-bottom">
-        <p className="footerp">© 2025 VENTURES VELOCITY. All rights reserved.</p>
+        <p className="footerp">© 2025 VELOCITY VENTURES LLC. All rights reserved.</p>
         <div className="social-icons">
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="social-btn" title="Facebook">
             <i className="footer-icon fab fa-facebook-f"></i>

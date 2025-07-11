@@ -30,7 +30,7 @@
 
 /* === HEADER === */
 .quote-modal h2 {
-  color: #800080;
+  color: #005F7B; /* Updated from purple */
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 8px;
@@ -39,7 +39,7 @@
 
 .quote-modal p {
   font-size: 14px;
-  color: #555;
+  color: #08314A; /* Slightly softer teal */
   margin-bottom: 20px;
   text-align: center;
 }
@@ -54,25 +54,26 @@
 .quote-form label {
   font-weight: 600;
   font-size: 14px;
-  color: #333;
+  color: #005F7B;
 }
 
 .quote-form input,
 .quote-form textarea {
   padding: 10px 14px;
   font-size: 14px;
-  border: 1px solid #ccc;
+  border: 1px solid #7FEDDF;
   border-radius: 8px;
   resize: none;
   outline: none;
   width: 100%;
   box-sizing: border-box;
   transition: border-color 0.3s ease;
+  background: #f9ffff;
 }
 
 .quote-form input:focus,
 .quote-form textarea:focus {
-  border-color: #800080;
+  border-color: #00A0A9;
 }
 
 .quote-form textarea {
@@ -99,19 +100,19 @@
 }
 
 .submit-btn {
-  background: linear-gradient(to right, #a133ff, #5d00c7);
+  background: linear-gradient(to right, #00A0A9); 
   color: #fff;
   border: none;
 }
 
 .submit-btn:hover {
-  background: #5d00c7;
+  background: #00A0A9;
 }
 
 .cancel-btn {
   background: #f3f3f3;
   border: 1px solid #ccc;
-  color: #444;
+  color: #005F7B;
 }
 
 .cancel-btn:hover {
@@ -127,7 +128,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: #666;
+  color: #005F7B;
   transition: transform 0.2s ease;
 }
 
