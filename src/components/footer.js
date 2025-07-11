@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="footer-left">
           <h2 className="footer-title">VELOCITY VENTURES LLC</h2>
           <h3 className="footer-heading">LOCATION</h3>
-          <p className="footerp">1371 Bobwhite Court</p>
-          <p className="footerp">Greenwood, IN 46143</p>
+          <p className="footerp">1371 Bobwhite Court,</p>
+          <p className="footerp">Greenwood, IN 46143, USA</p>
         </div>
 
         {/* Quick Links */}

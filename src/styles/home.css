@@ -1,13 +1,18 @@
-/* Global Reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+/* Global Styles */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
   font-family: 'Poppins', sans-serif;
 }
 
@@ -71,7 +76,6 @@ body {
 /* Description */
 .corporate-hero-description {
   font-size: 1.1rem;
-  /* 🔹 Moderate size */
   line-height: 1.7;
   margin-bottom: 2rem;
   color: #e6e6e6;
@@ -97,7 +101,7 @@ body {
 .corporate-hero-button.primary {
   background: linear-gradient(135deg, #005F7B, #00A0A9);
   color: white;
-  border: none;
+  border: 2px solid #ffffff;
   box-shadow: 0 2px 12px rgba(0, 160, 169, 0.4);
 }
 
@@ -489,6 +493,7 @@ body {
 .tab-description-box {
   flex: 1;
   max-width: 520px;
+  min-height: 320px;
 }
 
 .tab-label {
@@ -564,12 +569,10 @@ body {
 
 /* ========== Shared Section Style ========== */
 .what-we-offer-section,
-
 .cta-section {
   padding: 80px 20px;
   text-align: center;
   background-color: #f1fdff;
-  /* light aqua base */
 }
 
 .section-heading {
@@ -598,7 +601,7 @@ body {
 }
 
 .offer-card:hover {
-  background: #e3fdff;
+  background: linear-gradient(to top right, #d8feff, #ffffff);
   transform: translateY(-6px);
   box-shadow: 0 12px 32px rgba(0, 160, 169, 0.2);
 }
@@ -654,41 +657,63 @@ body {
 
 /* ========== CTA Section ========== */
 .cta-section {
-  background: linear-gradient(135deg, #005F7B, #00A0A9);
+  padding: 50px 0;
+  background: linear-gradient(135deg, #005F7B 0%, #08314A 100%);
   color: white;
-  padding: 100px 20px;
+  text-align: center;
 }
 
 .cta-heading {
-  font-size: 2.6rem;
-  margin-bottom: 20px;
-  font-weight: 800;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
   color: #ffffff;
 }
 
 .cta-subtext {
-  font-size: 1.3rem;
-  margin-bottom: 40px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 3rem;
   color: #e0ffff;
   max-width: 700px;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta-button {
-  background-color: #ffffff;
-  color: #005F7B;
-  padding: 14px 36px;
-  border-radius: 8px;
-  font-weight: 700;
-  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
   font-size: 1.1rem;
-  transition: 0.3s ease;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   display: inline-block;
+  position: relative;
+  overflow: hidden;
+  background: white;
+  color: #005F7B;
+  border: 2px solid white;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.cta-button:hover::before {
+  left: 100%;
 }
 
 .cta-button:hover {
-  background-color: #7FEDDF;
-  color: #08314A;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 95, 123, 0.3);
+  background: transparent;
+  color: white;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
 }

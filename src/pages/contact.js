@@ -31,11 +31,43 @@ const Contact = () => {
       )}
 
       <section className="contact-hero-simple">
-        <h1 className="contact-main-heading">
-          <span className="highlight">Contact</span> Us
-        </h1>
-        <p className="contact-subtext">Your Strategic Partner for Digital Solutions and Agile Transformation</p>
-        <div className="underline" />
+        <div className="stars-container">
+          {/* Regular twinkling stars */}
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          <div className="star"></div>
+          {/* Large blinking stars */}
+          <div className="star star-large"></div>
+          <div className="star star-large"></div>
+          <div className="star star-large"></div>
+          <div className="star star-large"></div>
+          <div className="star star-large"></div>
+          {/* Moving stars */}
+          <div className="star moving-star"></div>
+          <div className="star moving-star"></div>
+          <div className="star moving-star"></div>
+          <div className="star moving-star"></div>
+          <div className="star moving-star"></div>
+        </div>
+        <div className="contact-hero-content">
+          <h1 className="contact-main-heading">
+            <span className="highlight">Contact</span> Us
+          </h1>
+          <p className="contact-subtext">Let's Connect and Transform Your Digital Vision Into Reality</p>
+          <div className="underline" />
+        </div>
       </section>
 
       <section className="contact-content">

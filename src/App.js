@@ -7,20 +7,20 @@ import Footer from "./components/footer";
 
 import Home from "./pages/home";
 import Contact from "./pages/contact";
+import About from "./pages/about";
+import Services from "./pages/services";
 
 const App = () => {
   return (
     <Router>
-
-
       <Navbar />
-      <main>
         <Routes>
           <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
-      </main>
       <Footer />
     </Router>
   );
