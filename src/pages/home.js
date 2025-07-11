@@ -15,6 +15,8 @@ import devopsImg from "../assets/images/devops.png";
 import cloudImg from "../assets/images/cloud.jpg";
 import aiImg from "../assets/images/ai.webp";
 
+import ChatbotPopup from "../components/ChatbotPopup";
+
 // Services Data
 const services = [
   { title: "Digital Transformation", icon: digitalIcon },
@@ -251,6 +253,8 @@ const HeroSection = () => {
           <a href="/contact" className="cta-button">Let’s Get Started</a>
         </motion.div>
       </section>
+
+       <ChatbotPopup />
 
     </>
   );
