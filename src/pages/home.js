@@ -144,9 +144,12 @@ const HeroSection = () => {
             From custom platforms to scalable cloud solutions, we combine
             <span className="highlighted-text"> deep tech expertise</span> with agile coaching to deliver real results.
           </p>
-          <motion.button whileHover={{ scale: 1.05 }} className="mission-explore-btn">
-            Explore More
-          </motion.button>
+          <a href="/about">
+            <motion.button whileHover={{ scale: 1.05 }} className="mission-explore-btn">
+              Explore More
+            </motion.button>
+          </a>
+
         </motion.div>
       </section>
 
@@ -254,7 +257,7 @@ const HeroSection = () => {
         </motion.div>
       </section>
 
-       <ChatbotPopup />
+      <ChatbotPopup />
 
     </>
   );

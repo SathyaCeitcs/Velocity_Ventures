@@ -400,24 +400,52 @@ html, body {
 }
 
 /* === Responsive === */
-@media screen and (max-width: 1024px) {
-  .mission-wrapper {
-    flex-direction: column;
-    text-align: center;
-    padding: 4rem 5%;
-  }
-
-  .mission-left,
-  .mission-right {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-
+@media screen and (max-width: 768px) {
   .image-wrapper {
-    margin-bottom: 2rem;
+    width: 260px;
+    height: 260px;
+    padding: 15px;
+  }
+
+  .animated-image {
+    width: 100%;
+  }
+
+  .mission-title {
+    font-size: 2rem;
+  }
+
+  .mission-desc {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .mission-explore-btn {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.5rem;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .image-wrapper {
+    width: 220px;
+    height: 220px;
+    padding: 10px;
+  }
+
+  .mission-wrapper {
+    padding: 3rem 5%;
+  }
+
+  .mission-title {
+    font-size: 1.8rem;
+  }
+
+  .mission-desc {
+    font-size: 0.95rem;
+  }
+}
+
 
 /* === Tab Section Styles === */
 .tab-section {
