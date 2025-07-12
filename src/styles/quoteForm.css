@@ -59,10 +59,11 @@
   color: #005F7B;
 }
 
+/* ==== Prevent Safari Zoom by using 16px === */
 .quote-form input,
 .quote-form textarea {
   padding: 10px 14px;
-  font-size: 14px;
+  font-size: 16px !important;  /* 👈 Prevent iPhone zoom */
   border: 1px solid #7FEDDF;
   border-radius: 8px;
   background: #f9ffff;
@@ -136,7 +137,7 @@
   }
 }
 
-/* === RESPONSIVE (TABLET) === */
+/* === TABLET === */
 @media (max-width: 768px) {
   .quote-modal h2 {
     font-size: 20px;
@@ -174,7 +175,7 @@
   .quote-form input,
   .quote-form textarea {
     padding: 9px 12px;
-    font-size: 16px;
+    font-size: 16px !important; /* 👈 Safari iPhone fix again */
   }
 
   .quote-form textarea {
@@ -195,4 +196,9 @@
   .close-modal {
     font-size: 20px;
   }
+}
+
+/* === Global Safari Fix === */
+html {
+  -webkit-text-size-adjust: 100%; /* prevent Safari from resizing text */
 }
