@@ -10,13 +10,16 @@ const Navbar = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const toggleForm = () => setShowForm(!showForm);
 
+  // Close menu on nav link click (for mobile/tablet)
+  const handleNavClick = () => {
+    if (window.innerWidth <= 1024) {
+      setMenuOpen(false);
+    }
+  };
+
   // Prevent background scroll when modal is open
   useEffect(() => {
-    if (showForm) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    document.body.style.overflow = showForm ? "hidden" : "auto";
     return () => (document.body.style.overflow = "auto");
   }, [showForm]);
 
@@ -29,10 +32,10 @@ const Navbar = () => {
           </div>
 
           <nav className={`navbar-center nav-links ${menuOpen ? "open" : ""}`}>
-            <NavLink to="/home" activeClassName="active">Home</NavLink>
-            <NavLink to="/about" activeClassName="active">About</NavLink>
-            <NavLink to="/services" activeClassName="active">Services</NavLink>
-            <NavLink to="/contact" activeClassName="active">Contact</NavLink>
+            <NavLink to="/home" activeClassName="active" onClick={handleNavClick}>Home</NavLink>
+            <NavLink to="/about" activeClassName="active" onClick={handleNavClick}>About</NavLink>
+            <NavLink to="/services" activeClassName="active" onClick={handleNavClick}>Services</NavLink>
+            <NavLink to="/contact" activeClassName="active" onClick={handleNavClick}>Contact</NavLink>
           </nav>
 
           <div className="navbar-right">
@@ -53,7 +56,14 @@ const Navbar = () => {
             <button className="close-modal" onClick={toggleForm}>×</button>
             <h2>Get Quote</h2>
             <p>Tell us about your project and we'll provide a custom quote.</p>
-            <form className="quote-form" onSubmit={(e) => { e.preventDefault(); alert("Quote Submitted!"); }}>
+            <form
+              className="quote-form"
+              onSubmit={(e) => {
+                e.preventDefault();
+                alert("Quote Submitted!");
+                setShowForm(false);
+              }}
+            >
               <label>Name *</label>
               <input type="text" placeholder="Your full name" required />
               <label>Email *</label>
