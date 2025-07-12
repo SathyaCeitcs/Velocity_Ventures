@@ -46,17 +46,17 @@ const Footer = () => {
 
       {/* Bottom Strip */}
       <div className="footer-bottom">
-        <p className="footerp">© 2025 VELOCITY VENTURES LLC. All rights reserved.</p>
+        <p className="footer-rights">© 2025 VELOCITY VENTURES LLC. All rights reserved.</p>
         <div className="social-icons">
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="social-btn" title="Facebook">
+          <div className="social-btn" title="Facebook">
             <i className="footer-icon fab fa-facebook-f"></i>
-          </a>
-          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="social-btn" title="Twitter">
+          </div>
+          <div className="social-btn" title="Twitter">
             <i className="footer-icon fab fa-twitter"></i>
-          </a>
-          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="social-btn" title="YouTube">
+          </div>
+          <div className="social-btn" title="YouTube">
             <i className="footer-icon fab fa-youtube"></i>
-          </a>
+          </div>
         </div>
       </div>
     </footer>
