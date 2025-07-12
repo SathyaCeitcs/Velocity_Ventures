@@ -38,7 +38,7 @@ const Footer = () => {
         {/* Contact Details */}
         <div className="footer-right">
           <h3 className="footer-heading">CONTACT DETAILS</h3>
-          <p className="footerp"><i className="fas fa-envelope"></i> joysantosh@gmail.com</p>
+          <p className="footerp"><i className="fas fa-envelope"></i> sample@gmail.com</p>
           <p className="footerp"><i className="fas fa-clock"></i> Mon–Fri: 9 AM – 5 PM</p>
           <p className="footerp"><i className="fas fa-times-circle"></i> Sat & Sun: Closed</p>
         </div>
