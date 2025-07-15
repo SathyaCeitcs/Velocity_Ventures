@@ -72,7 +72,7 @@ const Contact = () => {
 
       <section className="contact-content">
         <div className="contact-left" data-aos="fade-right">
-          <p>Drop us a line! We'd love to hear from you.</p>
+          <p>Drop us a line! We'd love to hear from you</p>
           <form className="contact-form" onSubmit={handleSubmit}>
             <label htmlFor="name" className="form-label">Name</label>
             <input

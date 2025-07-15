@@ -445,10 +445,14 @@ iframe {
     font-size: 1.1rem;
   }
 
+  .contact-content {
+    padding: 0;
+  }
+
   .contact-left,
   .contact-right {
     margin: 10px;
-    padding: 20px;
+    padding: 20px 10px;
   }
 
   .contact-left p {
