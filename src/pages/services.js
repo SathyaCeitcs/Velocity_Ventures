@@ -1,36 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "../styles/services.css";
 
 const Services = () => {
   const [activeService, setActiveService] = useState(0);
-
-  useEffect(() => {
-    // Scroll Animation Observer
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          // Add delay based on element index for staggered animations
-          setTimeout(() => {
-            entry.target.classList.add('animate');
-          }, index * 100);
-        }
-      });
-    }, observerOptions);
-
-    // Observe all animatable elements
-    const animateElements = document.querySelectorAll('.animate-on-scroll, .animate-on-scroll-left, .animate-on-scroll-right, .animate-on-scroll-scale');
-    animateElements.forEach(el => observer.observe(el));
-
-    // Cleanup
-    return () => {
-      animateElements.forEach(el => observer.unobserve(el));
-    };
-  }, []);
+  const location = useLocation();
 
   const services = [
     {
@@ -109,6 +83,55 @@ const Services = () => {
       color: "#DC2626"
     }
   ];
+
+  useEffect(() => {
+    // Check for service parameter in URL
+    const urlParams = new URLSearchParams(location.search);
+    const serviceParam = urlParams.get('service');
+    
+    if (serviceParam !== null) {
+      const serviceIndex = parseInt(serviceParam);
+      if (serviceIndex >= 0 && serviceIndex < services.length) {
+        setActiveService(serviceIndex);
+        
+        // Scroll to the services section after a short delay
+        setTimeout(() => {
+          const servicesSection = document.querySelector('.services-offer');
+          if (servicesSection) {
+            servicesSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    }
+  }, [location.search]);
+
+  useEffect(() => {
+    // Scroll Animation Observer
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          // Add delay based on element index for staggered animations
+          setTimeout(() => {
+            entry.target.classList.add('animate');
+          }, index * 100);
+        }
+      });
+    }, observerOptions);
+
+    // Observe all animatable elements
+    const animateElements = document.querySelectorAll('.animate-on-scroll, .animate-on-scroll-left, .animate-on-scroll-right, .animate-on-scroll-scale');
+    animateElements.forEach(el => observer.observe(el));
+
+    // Cleanup
+    return () => {
+      animateElements.forEach(el => observer.unobserve(el));
+    };
+  }, []);
 
   return (
     <div className="services-page">
