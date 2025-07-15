@@ -347,7 +347,7 @@ body {
   background: #ffffff;
   padding: 60px;
   border-radius: 14px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .contact-left p {
@@ -355,6 +355,7 @@ body {
   margin-bottom: 20px;
   color: #555;
   font-weight: 400;
+  text-align: center;
 }
 
 .contact-form {
@@ -392,7 +393,7 @@ body {
 
 .form-button {
   margin-top: 20px;
-  padding: 16px 32px;
+  padding: 14px 32px;
   background: linear-gradient(135deg, #00A0A9, #005F7B);
   color: #fff;
   font-size: 1.1rem;
@@ -416,9 +417,9 @@ body {
   flex: 1 1 420px;
   background: #00A0A9;
   color: white;
-  padding: 30px;
+  padding: 45px 25px;
   border-radius: 14px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .contact-right h2 {
