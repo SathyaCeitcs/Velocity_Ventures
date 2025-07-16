@@ -126,12 +126,12 @@ body {
   .navbar-inner {
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 20px 20px;
   }
 
   .nav-links {
     position: absolute;
-    top: 75px;
+    top: 94px;
     left: 0;
     right: 0;
     flex-direction: column;
@@ -169,7 +169,7 @@ body {
   .navbar-inner {
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px 15px;
+    padding: 15px 15px;
   }
 
   .logo-text {
@@ -177,7 +177,7 @@ body {
   }
 
   .nav-links {
-    top: 55px;
+    top: 65px;
     padding: 15px 0;
     gap: 12px;
   }
