@@ -189,7 +189,7 @@ const HeroSection = () => {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <h2 className="section-heading">What We Offer</h2>
+          <h2 className="section-offer-heading">What We Offer</h2>
           <div className="offer-card-grid">
             {[
               {
@@ -230,7 +230,7 @@ const HeroSection = () => {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <h2 className="section-heading">Why Choose Velocity Ventures LLC?</h2>
+          <h2 className="section-about-heading">Why Choose Velocity Ventures LLC?</h2>
           <div className="choose-line" />
           <p className="choose-description">
             Because digital solutions are only as strong as the people and processes behind them.

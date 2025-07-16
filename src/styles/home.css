@@ -63,7 +63,6 @@ html, body {
 /* Heading */
 .corporate-hero-heading {
   font-size: 2.8rem;
-  /* 🔹 Slightly smaller */
   font-weight: 800;
   margin-bottom: 1rem;
   line-height: 1.3;
@@ -193,7 +192,7 @@ html, body {
 .services-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
+  gap: 1.2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -201,7 +200,7 @@ html, body {
 .service-card {
   background: #ffffff;
   border-radius: 16px;
-  padding: 2rem 1.5rem;
+  padding: 2rem 1rem;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: space-between;
@@ -209,13 +208,8 @@ html, body {
   transition: all 0.35s ease;
   position: relative;
   overflow: hidden;
-  border: 1px solid transparent;
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
   border: 1px solid #00A0A9;
-  box-shadow: 0 10px 24px rgba(0, 160, 169, 0.15);
+  box-shadow: 0 0 20px rgba(0, 160, 169, 0.2);
 }
 
 .service-text {
@@ -243,10 +237,6 @@ html, body {
   height: 32px;
   object-fit: contain;
   transition: transform 0.3s ease;
-}
-
-.service-card:hover .service-icon {
-  transform: scale(1.2);
 }
 
 /* ===== Responsive Design ===== */
@@ -312,7 +302,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 4rem;
   padding: 5rem 10%;
   background: linear-gradient(145deg, #f9fafa, #ecfbff);
   overflow: hidden;
@@ -412,7 +402,7 @@ html, body {
   }
 
   .mission-title {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 
   .mission-desc {
@@ -586,6 +576,10 @@ html, body {
     text-align: center;
   }
 
+  .tab-section-heading {
+    font-size: 1.9rem;
+  }
+
   .tab-description-box h3 {
     font-size: 1.5rem;
   }
@@ -603,7 +597,7 @@ html, body {
   background-color: #f1fdff;
 }
 
-.section-heading {
+.section-offer-heading {
   font-size: 2.4rem;
   color: #005F7B;
   margin-bottom: 30px;
@@ -648,6 +642,11 @@ html, body {
   font-weight: 500;
 }
 
+@media screen and (max-width: 768px) {
+  .section-offer-heading {
+    font-size: 1.9rem;
+  }
+}
 
 /* ========== Why Choose Section ========== */
 .why-choose-section {
@@ -656,7 +655,7 @@ html, body {
   text-align: center;
 }
 
-.section-heading {
+.section-about-heading {
   font-size: 2.5rem;
   color: #003d4d;
   margin-bottom: 10px;
@@ -682,6 +681,11 @@ html, body {
   font-weight: 500;
 }
 
+@media screen and (max-width: 768px) {
+  .section-about-heading {
+    font-size: 1.9rem;
+  }
+}
 
 /* ========== CTA Section ========== */
 .cta-section {
@@ -744,4 +748,10 @@ html, body {
   color: white;
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+@media screen and (max-width: 768px) {
+  .cta-heading {
+    font-size: 2.5rem;
+  }
 }
