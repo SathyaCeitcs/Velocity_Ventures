@@ -10,14 +10,12 @@ const Navbar = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const toggleForm = () => setShowForm(!showForm);
 
-  // Close menu on nav link click (for mobile/tablet)
   const handleNavClick = () => {
     if (window.innerWidth <= 1024) {
       setMenuOpen(false);
     }
   };
 
-  // Prevent background scroll when modal is open
   useEffect(() => {
     document.body.style.overflow = showForm ? "hidden" : "auto";
     return () => (document.body.style.overflow = "auto");
@@ -31,25 +29,24 @@ const Navbar = () => {
             <div className="logo-text">Velocity Ventures</div>
           </div>
 
-          <nav className={`navbar-center nav-links ${menuOpen ? "open" : ""}`}>
-            <NavLink to="/home" activeClassName="active" onClick={handleNavClick}>Home</NavLink>
-            <NavLink to="/about" activeClassName="active" onClick={handleNavClick}>About</NavLink>
-            <NavLink to="/services" activeClassName="active" onClick={handleNavClick}>Services</NavLink>
-            <NavLink to="/contact" activeClassName="active" onClick={handleNavClick}>Contact</NavLink>
-          </nav>
-
           <div className="navbar-right">
+            <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
+              <NavLink to="/home" activeClassName="active" onClick={handleNavClick}>Home</NavLink>
+              <NavLink to="/about" activeClassName="active" onClick={handleNavClick}>About</NavLink>
+              <NavLink to="/services" activeClassName="active" onClick={handleNavClick}>Services</NavLink>
+              <NavLink to="/contact" activeClassName="active" onClick={handleNavClick}>Contact</NavLink>
+              <button className="quote-btn" onClick={toggleForm}>Get Quote</button>
+            </nav>
+
             <button className={`menu-toggle ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
               <span className="bar"></span>
               <span className="bar"></span>
               <span className="bar"></span>
             </button>
-            <button className="quote-btn" onClick={toggleForm}>Get Quote</button>
           </div>
         </div>
       </header>
 
-      {/* Quote Modal */}
       {showForm && (
         <div className="modal-overlay" onClick={toggleForm}>
           <div className="quote-modal" onClick={(e) => e.stopPropagation()}>
