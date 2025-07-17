@@ -1,0 +1,105 @@
+/* Container fills full viewport and centers content */
+.notfound-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+  background-color: #f4f6f8;
+  box-sizing: border-box;
+}
+
+/* Centered box with clean styling */
+.notfound-box {
+  background-color: #ffffff;
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 404 title */
+.notfound-title {
+  font-size: 6rem;
+  font-weight: bold;
+  margin: 0;
+  color: #222;
+}
+
+/* Subtitle text */
+.notfound-subtitle {
+  font-size: 1.75rem;
+  color: #444;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.notfound-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* Link button */
+.notfound-link {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0073e6;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.notfound-link:hover {
+  background-color: #005bb5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .notfound-box {
+    padding: 30px 20px;
+  }
+
+  .notfound-title {
+    font-size: 4rem;
+  }
+
+  .notfound-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .notfound-description {
+    font-size: 0.95rem;
+  }
+
+  .notfound-link {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .notfound-title {
+    font-size: 3.5rem;
+  }
+
+  .notfound-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .notfound-description {
+    font-size: 0.9rem;
+  }
+
+  .notfound-link {
+    width: 100%;
+    display: block;
+    padding: 12px;
+  }
+}
